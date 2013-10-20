@@ -69,4 +69,5 @@ var notesHandle = Meteor.subscribe('notes');
 
 Meteor.startup(function(){
   Session.set('currentSpeaker', "Chris Dixon");
+  mixpanel.track("client-startup");
 })
