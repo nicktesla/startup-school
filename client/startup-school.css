@@ -11,6 +11,45 @@
 	width:30%;
 }
 
+.item-entry-section {
+	margin-left:40px;
+	margin-top:10px;
+}
+
+.add-note-item {
+	margin-top:1px;
+	margin-left:150px;
+}
+
+.speaker-note {
+	margin-top:20px;
+}
+
 .title-company {
 	margin:10px;
+}
+
+.item-entry-section textarea {
+	width: 60%;
+}
+
+.subitem-field {
+	width: 250px;
+}
+
+.main-note {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.note-header {
+	font-size: 20px;
+}
+
+.add-subnote-icon {
+	margin-left: 5px;
+}
+
+.main-note-text {
+	font-size: 17px;
 }

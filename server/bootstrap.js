@@ -68,8 +68,7 @@ if(Notes.find().count()==0) {
         },
         {
           text: "Know a secret",
-          subtext: "Know the problem better than anyone else",
-          subtext: "Know the tools better than anyone else",
+          subnotes:[{text: "Know the problem better than anyone else"}, {text: "Know the tools better than anyone else"}]
         },
         {
           text: "Before Dropbox, there were 100 cloud storage companies, half of which were VC funded. But Dropbox knew the problem better than anyone else, focused on making the actual use of space easier, and disrupted the existing solutions who were merely trying to compete on economy (offer more space and/or charge less)"
@@ -81,7 +80,39 @@ if(Notes.find().count()==0) {
           text: "Perry Chen - Founder/CEO artistic (autistic?) community"
         }
       ]
-    }
+    },
+    {
+      speaker:"Chase Adam", 
+      noteItems:[]
+    },
+    {
+      speaker:"Nate Blecharczyk", 
+      noteItems:[]
+    },
+    {
+      speaker:"Ron Conway", 
+      noteItems:[]
+    },
+    {
+      speaker:"Jack Dorsey", 
+      noteItems:[]
+    }, 
+    {
+      speaker:"Phil Libin", 
+      noteItems:[]
+    },
+    {
+      speaker:"Dan Siroker", 
+      noteItems:[]
+    },
+    {
+      speaker: "Balaji Srinivasan",
+      noteItems: []
+    },
+    {
+      speaker: "Mark Zuckerberg",
+      noteItems: []
+    } 
   ];
   notes.forEach(function(note){
       Notes.insert(note);

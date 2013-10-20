@@ -12,28 +12,48 @@
   <h1>Speaker Notes</h1>
   <ul>
 	  {{#each notes}}
-	  	<li>{{> note}}</li>
+	  	<li class="speaker-note">{{> note}}</li>
 	  {{/each}}
   </ul>
 </div>
 </template>
 
 <template name="note">
-  <b>{{speaker}} Notes</b>
-  <ul>
-	  {{#each noteItems}}
-	  	<li>{{> noteItem}}</li>
-	  {{/each}}
-  </ul>
+	<div id="{{speaker}}-note" data-noteId="{{_id}}" class="note">
+	  <b><span class="note-header">{{speaker}} Notes</span></b>
+	  <ul>
+		  {{#each noteItems}}
+		  	<li>{{> noteItem}}</li>
+		  {{/each}}
+	  </ul>
+	</div>
+	<div class="item-entry-section">
+		<textarea id="{{_id}}-new-note-field" cols="400" rows="3" placeholder="Add a new note for {{speaker}}, click button to save" ></textarea>
+		<div class="add-note-item">
+			<a data-speaker="{{speaker}}" class="btn btn-success">Add new note item</a>
+		</div>
+	</div>
 </template>
 
 <template name="noteItem">
-	{{text}}
+	<div class="main-note">
+		<span class="main-note-text">{{text}}</span><i class="icon-plus-sign add-subnote-icon" nid="{{_id}}" style="display:none"></i>
+	</div>
+	<div class="sub-notes">
+		<ul>
+			{{#each subnotes}}
+				<li>{{text}}</li>
+			{{/each}}
+		</ul>
+	</div>
+	<div class="subitem-entry-section" style="display:none">
+		<input class="subitem-field" type="text" placeholder="Add a new subnote, enter to save" />
+	</div>
 </template>
 
 <template name="speakers">
 	<div id="speakers-section">
-	  <h1>Select a speaker</h1>
+	  <h1>Filter By Speaker</h1>
 	  <ul>
 		  {{#each speakers}}
 		  	<li>{{> speaker}}</li>
