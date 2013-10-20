@@ -67,3 +67,6 @@ var notesHandle = Meteor.subscribe('notes');
 
   });  
 
+Meteor.startup(function(){
+  Session.set('currentSpeaker', "Chris Dixon");
+})
