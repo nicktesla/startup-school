@@ -1,0 +1,54 @@
+<head>
+  <title>startup-school</title>
+</head>
+
+<body>
+  {{> notes}}
+  {{> speakers}}
+</body>
+
+<template name="notes">
+<div id="notes-section">
+  <h1>Speaker Notes</h1>
+  <ul>
+	  {{#each notes}}
+	  	<li>{{> note}}</li>
+	  {{/each}}
+  </ul>
+</div>
+</template>
+
+<template name="note">
+  <b>{{speaker}} Notes</b>
+  <ul>
+	  {{#each noteItems}}
+	  	<li>{{> noteItem}}</li>
+	  {{/each}}
+  </ul>
+</template>
+
+<template name="noteItem">
+	{{text}}
+</template>
+
+<template name="speakers">
+	<div id="speakers-section">
+	  <h1>Select a speaker</h1>
+	  <ul>
+		  {{#each speakers}}
+		  	<li>{{> speaker}}</li>
+		  {{/each}}
+	  </ul>
+	</div>
+</template>
+
+<template name="speaker">
+	<div class="speaker">
+		<div class="speaker-name">
+			<a id="{{name}}" href="#"><b>{{name}}</b></a>
+		</div>
+		<div class="title-company">
+			{{title}}, {{company}}
+		</div>
+	</div>
+</template>

@@ -1,0 +1,16 @@
+/* CSS declarations go here */
+
+#notes-section {
+	float: left;
+	margin-left:50px;
+	width:40%;
+}
+
+#speakers-section {
+	float:left;
+	width:30%;
+}
+
+.title-company {
+	margin:10px;
+}
