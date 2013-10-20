@@ -13,6 +13,7 @@ You can currently add notes and sub notes and filter notes by speaker.
   <li>Edit/Delete items</li>
   <li>Include media elements (e.g. YouTube videos/images)</li>
   <li>Add content from previous startup schools</li>
+  <li>Add Talk Highlights</li>
 </ul>
 
 
